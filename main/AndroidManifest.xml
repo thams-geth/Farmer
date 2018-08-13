@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tts.farmer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/farmer_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/farmer_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SellActivity"
+            />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ProductList"
+            android:parentActivityName=".HomeActivity"/>
+        <activity android:name=".AgreementActivity" />
+        <activity
+            android:name=".DetailsActivity"
+            android:label="@string/title_activity_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PhoneAuthActivity" />
+        <activity
+            android:name=".MyProfileActivity"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MyProfileEditActivity" />
+        <activity android:name=".ChatListActivity"
+            android:parentActivityName=".MyProfileActivity"/>
+        <activity android:name=".NotificationActivity" />
+        <activity android:name=".MyPostsActivity" />
+        <activity android:name=".UserInfoActivity"
+            android:parentActivityName=".DetailsActivity"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCzh6oo2FGqk0OTfQWkCKvbLqxsOyCZodk" />
+
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".MyPostDetailsActivity"></activity>
+    </application>
+
+</manifest>
